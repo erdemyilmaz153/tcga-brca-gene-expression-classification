@@ -1,11 +1,11 @@
 '''
-Gene Expression-Based Tumor Classification
+TCGA BRCA Multi-Omics Tumor Type Classification
 
 Dataset:
 TCGA BRCA Multi-Omics
 
 Objective:
-Classify histological tumor type using gene expression data.
+Classify breast cancer histological tumor type using multi-omics molecular features.
 
 Models:
 - Logistic Regression (L1)
@@ -13,10 +13,10 @@ Models:
 - Random Forest
 
 Evaluation:
-5-fold cross-validation
+5-fold cross-validation (Accuracy)
 
 Best Result:
-Logistic Regression (L1) achieved ~0.91 mean accuracy.
+Logistic Regression (L1) achieved ~0.91 mean cross-validation accuracy.
 '''
 
 import pandas as pd
@@ -35,13 +35,13 @@ from sklearn.ensemble import RandomForestClassifier
 
 # 1. Problem definition
 
-# Classifying tumor type using gene expression data in BRCA Multi-Omics (TCGA) dataset.
+# Classifying breast cancer histological tumor type using multi-omics molecular features from the TCGA BRCA dataset.
 
 
 # 2. Data loading
 
 df = pd.read_csv('brca_data_w_subtypes.csv')
-
+df.head()
 
 # 3. Basic exploration
 

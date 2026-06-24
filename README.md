@@ -1,18 +1,19 @@
-# TCGA BRCA Gene Expression Classification
+# TCGA BRCA Multi-Omics Tumor Type Classification
 
 ## Objective
-- Classify histological tumor type (infiltrating ductal carcinoma vs infiltrating lobular carcinoma) using gene expression data.
+- Classify breast cancer histological tumor type using multi-omics molecular features from the TCGA BRCA dataset.
 
 ## Dataset
-- TCGA BRCA Multi-Omics
+- TCGA BRCA Multi-Omics dataset
 
 ## Models Used
 - Logistic Regression (L1)
 - Logistic Regression (L2)
 - Random Forest
 
-## Evaluation Method
-- 5-fold cross-validation
+## Evaluation
+- 5-fold Cross-Validation
+- Accuracy
 
 ## Results
 | Model | Mean CV Accuracy |
@@ -22,7 +23,11 @@
 | Random Forest | 0.868 |
 
 ## Best Result
-- Logistic Regression (L1) achieved the highest mean cross-validation accuracy (0.913).
+- Logistic Regression (L1) achieved the highest mean cross-validation accuracy (0.913), suggesting that sparse feature selection was beneficial for this high-dimensional dataset.
+
+## Interpretation
+- Logistic Regression (L1) outperformed L2 regularization and Random Forest.
+- L1 regularization likely benefited from the high-dimensional nature of the dataset by selecting a sparse subset of informative features.
 
 ## Limitations
 - Dataset is relatively small
